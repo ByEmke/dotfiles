@@ -57,3 +57,6 @@ antigen theme amuse
 # Tell Antigen that you're done.
 antigen apply
 
+# source custom settings
+if [ -f ~/.zshrc.custom ]; && source ~/.zshrc.custom
+
