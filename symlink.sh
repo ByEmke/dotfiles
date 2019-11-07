@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Up from scripts dir
-cd ..
+# cd ..
 
 dotfilesDir=$(pwd)
 
