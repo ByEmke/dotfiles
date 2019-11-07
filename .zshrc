@@ -41,13 +41,13 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # Load the theme.
 antigen theme amuse 
 
-# prompt from amuse with user@host prepended
+# Tell Antigen that you're done.
+antigen apply
+
+# Prompt from amuse with user@host prepended
 PROMPT='
 %F{244}%n@%m|%{$fg_bold[green]%}%~%{$reset_color%}$(git_prompt_info) ⌚ %{$fg_bold[red]%}%*%{$reset_color%}
 $ '
-
-# Tell Antigen that you're done.
-antigen apply
 
 # source custom settings
 if [ -f ~/.zshrc.custom ]; && source ~/.zshrc.custom
