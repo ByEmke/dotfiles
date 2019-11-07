@@ -14,19 +14,7 @@ export EDITOR="$VISUAL"
 # Auto complete
 autoload -Uz compinit && compinit -i
 
-if [ -f '/Users/emke/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/emke/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/emke/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/emke/google-cloud-sdk/completion.zsh.inc'; fi
-
-# virtualenv with alias
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
-
-# PATH additions
-export PATH="/usr/local/opt/php@7.1/bin:$PATH"
-export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
-
 # Custom aliases
-alias load_nvm='export NVM_DIR="$HOME/.nvm" && "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"'
 alias mux='tmuxinator'
 alias ..='cd ../'
 alias ...='cd ../../'
