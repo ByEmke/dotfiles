@@ -50,5 +50,5 @@ PROMPT='
 $ '
 
 # source custom settings
-if [ -f ~/.zshrc.custom ]; && source ~/.zshrc.custom
+if [ -f ~/.zshrc.local ]; && source ~/.zshrc.local
 
