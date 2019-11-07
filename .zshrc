@@ -40,7 +40,11 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
 antigen theme amuse 
-# antigen theme denysdovhan/spaceship-prompt
+
+# prompt from amuse with user@host prepended
+PROMPT='
+%F{244}%n@%m|%{$fg_bold[green]%}%~%{$reset_color%}$(git_prompt_info) ⌚ %{$fg_bold[red]%}%*%{$reset_color%}
+$ '
 
 # Tell Antigen that you're done.
 antigen apply
