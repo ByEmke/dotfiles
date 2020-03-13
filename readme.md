@@ -5,7 +5,7 @@
 Once vim-plug is installed, build YouCompleteMe via
 
 ```
-cd ~/.vim/bundle/YouCompleteMe
+apt instsall node npm build-essential cmake vim python3-dev
+cd ~/.vim/plugged/YouCompleteMe
 python3 install.py --all
-
 ```
