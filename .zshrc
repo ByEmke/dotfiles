@@ -2,6 +2,11 @@
 # zmodload zsh/zprof
 # zprof
 
+# Custom functions
+print-colors() {
+    for i in {1..256}; do print -P "%F{$i}Color : $i"; done;
+}
+
 # Custom config
 export VISUAL=vim
 export EDITOR="$VISUAL" 
@@ -45,9 +50,20 @@ antigen theme amuse
 antigen apply
 
 # Prompt from amuse with user@host prepended
-PROMPT='
-%F{244}%n@%m|%{$fg_bold[green]%}%~%{$reset_color%}$(git_prompt_info) ⌚ %{$fg_bold[red]%}%*%{$reset_color%}
-$ '
+MYIP=$(ifconfig eth0| grep 'inet ' | awk '{print $2}')
+SEPARATOR="%F{166} | "
+prompt_declaration=(
+    "%F{202}[%m]"
+    $SEPARATOR
+    "%F{220}%n@"$MYIP
+    $SEPARATOR
+    "%F{243}%*%{$reset_color%}"
+    $SEPARATOR
+)
+PROMPT='${(j::)prompt_declaration} $(git_prompt_info) ➜ '
+# PROMPT='
+# %F{202}[FTP] %F{220}%n@%m|%{$fg_bold[green]%}%~%{$reset_color%}$(git_prompt_info) ⌚ %{$fg_bold[red]%}%*%{$reset_color%}
+# $ '
 
 # source custom settings
 if [ -f ~/.zshrc.local ]; && source ~/.zshrc.local

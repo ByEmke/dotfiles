@@ -14,6 +14,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
+Plug 'altercation/vim-colors-solarized'
+Plug 'dense-analysis/ale'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -27,6 +29,11 @@ Plug 'godlygeek/tabular'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Valloric/YouCompleteMe'
 call plug#end()
+
+let g:solarized_termcolors=256
+syntax enable
+set background=dark
+colorscheme solarized
 
 let g:terraform_align=1
 let g:ycm_confirm_extra_conf=0
@@ -42,11 +49,16 @@ map gp :bp<cr>
 set hlsearch " highlight search
 set incsearch " search on type
 set number
-set ts=4
 set autoindent
 set expandtab
-set shiftwidth=4
 set showmatch
 set cursorline
 set hidden
 let python_hightlight_all = 1
+
+set tabstop=4
+set shiftwidth=4
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2                                                   
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType css setlocal shiftwidth=2 tabstop=2
+autocmd FileType scss setlocal shiftwidth=2 tabstop=2
