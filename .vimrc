@@ -56,6 +56,7 @@ set cursorline
 set hidden
 let python_hightlight_all = 1
 
+set mouse=a
 set tabstop=4
 set shiftwidth=4
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2                                                   
