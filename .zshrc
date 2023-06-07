@@ -1,3 +1,6 @@
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Profiler, leave #2 at the top, add #3 at the end of file. Rerun zsh
 # zmodload zsh/zprof
 # zprof
