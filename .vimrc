@@ -15,6 +15,7 @@ endif
 
 call plug#begin()
 Plug 'altercation/vim-colors-solarized'
+Plug 'EdenEast/nightfox.nvim'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
